@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: book review | Liquid Sky]]></title>
+  <link href="http://kijanowski.eu/blog/categories/book-review/atom.xml" rel="self"/>
+  <link href="http://kijanowski.eu/"/>
+  <updated>2014-09-24T21:37:00+02:00</updated>
+  <id>http://kijanowski.eu/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Drools JBoss Rules 5.0 Developer's Guide book review]]></title>
+    <link href="http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide/"/>
+    <updated>2009-10-02T17:34:00+02:00</updated>
+    <id>http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide</id>
+    <content type="html"><![CDATA[<p><a href="http://www.packtpub.com/drools-jboss-rules-5-0-developers-guide/book">The Developer&rsquo;s Guide</a> is the second book about
+Drools available from <a href="http://www.packtpub.com">Packt</a>. It nicely extends the Drools documentation showing a new point
+of view at almost all features.</p>
+
+<p>Although it wasn&rsquo;t always easy to follow I definitely recommend this book to developers who either are starting their
+journey with this rule engine or are already familiar with Drools. Examples are not trivial &lsquo;hello world&rsquo; applications.
+Especially my favorite Drools Fusion chapter about complex event processing is built up on quite advanced rules for a
+fraud detection system.</p>
+
+<!--more-->
+
+
+<p>One chapter is dedicated to performance, which is a must-read for all who have to deal with a huge amount of rules
+and facts. It explains how to write rules to take advantage of node sharing and how to speed up fact propagation
+using parallel mode.</p>
+
+<p>Another chapter is dedicated to a complete 3-tier JEE application. It&rsquo;s built up on Hibernate (for persistence),
+Bitronix transaction manager (for transactions), Spring MVC (for presentation) and obviously Drools (for business logic).</p>
+
+<p>What&rsquo;s also worth to note is the test driven development style presented in almost all examples.</p>
+
+<p>To sum it up, building rule based services is not an easy task. This book introduces the Drools rule engine and deals
+with almost all its capabilities - starting with the core engine functionality, going through decision tables,
+complex event processing and business process presentation ending with advanced topics covering performance and
+integration points with other systems.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JBoss Drools Business Rules book review]]></title>
+    <link href="http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review/"/>
+    <updated>2009-06-08T18:35:00+02:00</updated>
+    <id>http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s quite difficult to get started with Drools, especially if you don&rsquo;t have experience in developing Java
+applications. You might imagine how steep the learning curve is for business analysts, who associates Java with an
+island or coffee. However <a href="http://www.packtpub.com/jboss-drools-business-rules/book">this book</a> is aimed at exactly
+this group of non-technical people, who have knowledge how business runs, but don&rsquo;t know how or simply don&rsquo;t have the
+tools to persist it and &lsquo;transfer it to the world of computers&rsquo;.</p>
+
+<!--more-->
+
+
+<p>Most chapters are kept on a really basic level if it comes to writing Java code. On the other hand it&rsquo;s sufficient to
+get started. Moreover all used tools are open source software, which means you can use it for free.</p>
+
+<p>This book goes through almost all parts of Drools, especially the most important for business people like Guvnor,
+the application for authoring rules, DSLs allowing to write rules in plain English as well as support for the business
+analyst&rsquo;s most favorite tool: Excel spreadsheets.</p>
+
+<p>The author even introduces typical developers&#8217; tools like Eclipse, however I would recommend to go through an updated
+guide about installing the Eclipse plugin available in the
+<a href="http://downloads.jboss.com/drools/docs/5.0.1.26597.FINAL/drools-introduction/html_single/index.html#d0e1371">Drools docs</a>.
+A new requirement, that did not make it into this book, is to set up the Drools rule engine.</p>
+
+<p>There&rsquo;s a chapter I like very much. It makes very clear that testing rules is an important part of the development cycle
+and introduces three different ways to achieve full coverage of all written rules. The inquisitive reader might also
+have a look at the QA Analyzer, a quite new and powerful feature available in Guvnor.</p>
+
+<p>One chapter is definitely intended for Java developers - about deploying Drools applications in real world scenarios.
+The business people will still be able to follow, since the author keeps things easy and doesn&rsquo;t go to deep into
+details, however I would love to read more about this topic.</p>
+
+<p>The last two chapters about rule engine concepts and the newest features are a must-read for all those people who have
+read the Drools docs, but still need a different point of view to fully understand how Drools works. This topic is very
+important in my opinion, since it lets you write your rules more effectively.</p>
+
+<p>What I didn&rsquo;t like was the use of IE and Excel. Same results could be achieved with open source software, too. But
+that&rsquo;s a minor one ;)</p>
+
+<p>All in all, definitely a guide for non technical users, but also for developers, who have given the Drools docs a
+(second and third) try and still require a helping hand to sort it out how this Drools thing works and how to use it
+properly.</p>
+]]></content>
+  </entry>
+  
+</feed>

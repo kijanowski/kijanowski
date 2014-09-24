@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: monitoring | Liquid Sky]]></title>
+  <link href="http://kijanowski.eu/blog/categories/monitoring/atom.xml" rel="self"/>
+  <link href="http://kijanowski.eu/"/>
+  <updated>2014-09-24T21:37:00+02:00</updated>
+  <id>http://kijanowski.eu/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JBoss AS 7 monitoring: JMS, JVM and Http Connectors]]></title>
+    <link href="http://kijanowski.eu/blog/2013/05/26/jboss-as-7-monitoring-jms-jvm-and-http/"/>
+    <updated>2013-05-26T13:44:00+02:00</updated>
+    <id>http://kijanowski.eu/blog/2013/05/26/jboss-as-7-monitoring-jms-jvm-and-http</id>
+    <content type="html"><![CDATA[<p>In the <a href="../../2013/02/collecting-monitoring-and-charting.html">previous post</a> I explained how to monitor JBoss AS 7
+resources with <a href="https://jbison.com">JBison</a>. I extended the sample web application called
+<a href="https://github.com/kijanowski/buffalo">buffalo</a>, to collect JMS, JVM and Http Connector metrics.</p>
+
+<!--more-->
+
+
+<p>Check out, compile and deploy buffalo in JBoss AS 7:</p>
+
+<pre><code>git clone git://github.com/kijanowski/buffalo.git
+mvn clean install
+cp target/buffalo.war $JBOSS_HOME/standalone/deployments/
+</code></pre>
+
+<p>Start JBoss with the <em>standalone-full</em> profile to have the hornetq messaging subsystem enabled.
+Pass <em>-c standalone-full.xml</em> to the <em>standalone.sh</em> or <em>standalone.bat</em> script.
+Access <a href="http://IP:port/buffalo/rest/messaging/default/queue/testQueue">http://IP:port/buffalo/rest/messaging/default/queue/testQueue</a> to collect metrics for the <em>testQueue</em>.</p>
+
+<p>Now it&rsquo;s time to add <a href="https://jbison.com">JBison</a> to the game. Let&rsquo;s create a JSON monitor, which will fire email
+notifications if the number of messages in a queue reaches 100:</p>
+
+<p><img class="center" src="/images/2013-05-26-jboss-as-7-monitoring-jms-jvm-and-http/monitor.png"></p>
+
+<p>I started adding messages into the queue without processing them:</p>
+
+<p><img class="center" src="/images/2013-05-26-jboss-as-7-monitoring-jms-jvm-and-http/chart.png"></p>
+
+<p>The queue filled up and I got an email notifying me, that one of the metrics got violated:</p>
+
+<p><img class="center" src="/images/2013-05-26-jboss-as-7-monitoring-jms-jvm-and-http/email.png"></p>
+
+<p>For further details on what resources and metrics are exposed by buffalo, take a look at
+<a href="https://github.com/kijanowski/buffalo/blob/master/README.md">buffalo&rsquo;s getting started guide</a>.</p>
+
+<p>Also <a href="https://jbison.com/home">sign up for a free JBison account</a> and start monitoring your JBoss resources.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Collecting, Monitoring and Charting JBoss 7 metrics]]></title>
+    <link href="http://kijanowski.eu/blog/2013/02/01/collecting-monitoring-and-charting/"/>
+    <updated>2013-02-01T23:58:00+01:00</updated>
+    <id>http://kijanowski.eu/blog/2013/02/01/collecting-monitoring-and-charting</id>
+    <content type="html"><![CDATA[<h2>JBoss AS 7 metrics</h2>
+
+<!--more-->
+
+
+<p>By default, the JBoss AS 7 metrics are available at 127.0.0.1 on two ports:</p>
+
+<ul>
+<li>9999 via the native management API,</li>
+<li>9990 via http.</li>
+</ul>
+
+
+<p>Access is secured by the ManagementRealm, so you need to create a user and password, if you want to access the data via
+http. For more details take a look at $JBOSS_HOME/standalone/configuration/standalone.xml under the management element.</p>
+
+<p>There are at least 2 ways to collect the JBoss AS 7 metrics in JBison, a web and JBoss Application Server monitoring
+service, highly available, with instant free email notifications and exportable data.
+Since JBison needs to be able to connect to your JBoss AS instance, you will need to run it by passing <em>-b PUBLIC_IP</em></p>
+
+<h4>Expose the metrics through http with basic authentication</h4>
+
+<p>As already said, the interface is secured by the ManagementRealm. To create a user and password run the corresponding
+script in $JBOSS_HOME/bin:</p>
+
+<pre><code>./add-user.sh user passwd
+</code></pre>
+
+<p>By default the metrics are available at 127.0.0.1. This can be overridden by starting the server
+with <em>-Djboss.bind.address.management=PUBLIC_IP</em> where PUBLIC_IP is an IP address of your JBoss instance accessible
+from the internet.</p>
+
+<p>You should receive a nice response in JSON format when navigating to:</p>
+
+<p><a href="http://PUBLIC_IP:9990/management/subsystem/datasources/data-source/ExampleDS/statistics/pool?include-runtime=true">http://PUBLIC_IP:9990/management/subsystem/datasources/data-source/ExampleDS/statistics/pool?include-runtime=true</a></p>
+
+<p>These are the runtime metrics available for the ExampleDS datasource pool deployed out of the box with the standalone
+configuration.</p>
+
+<p>For the jdbc metrics of that data source navigate to</p>
+
+<p><a href="http://PUBLIC_IP:9990/management/subsystem/datasources/data-source/ExampleDS/statistics/jdbc?include-runtime=true">http://PUBLIC_IP:9990/management/subsystem/datasources/data-source/ExampleDS/statistics/jdbc?include-runtime=true</a></p>
+
+<p>To get statistics for the http connector open</p>
+
+<p><a href="http://PUBLIC_IP:9990/management/subsystem/web/connector/http?include-runtime=true">http://PUBLIC_IP:9990/management/subsystem/web/connector/http?include-runtime=true</a></p>
+
+<h4>Collect the metrics through the Native Management API and expose them via http through a proxy, deployed as a REST application</h4>
+
+<p>The idea is to instrument a JBoss Application Server to expose metrics in JSON format. I&rsquo;ve created a sample web
+application available on <a href="https://github.com/kijanowski/buffalo">github</a> which provides datasource metrics via REST.
+Once deployed, the application collects metrics for a particular datasource via the Native Management API.</p>
+
+<p>In this case, there is no need to pass <em>-Djboss.bind.address.management=PUBLIC_IP</em></p>
+
+<p>The metrics are available at:</p>
+
+<p><a href="http://PUBLIC_IP:8080/buffalo/rest/datasource/ExampleDS">http://PUBLIC_IP:8080/buffalo/rest/datasource/ExampleDS</a></p>
+
+<p>You can monitor a datasource deployed via a datasource descriptor. Deploy the following mysql-ds.xml file:</p>
+
+<pre><code>&lt;datasources xmlns="http://www.jboss.org/ironjacamar/schema"&gt;
+  &lt;datasource jndi-name="java:jboss/datasources/TestDS" pool-name="MySQLPool" enabled="true" use-java-context="true"&gt;
+    &lt;connection-url&gt;jdbc:mysql://localhost:3306/test&lt;/connection-url&gt;
+    &lt;driver&gt;mysql-connector-java-5.1.21.jar&lt;/driver&gt;
+    &lt;pool&gt;
+      &lt;max-pool-size&gt;30&lt;/max-pool-size&gt;
+    &lt;/pool&gt;
+    &lt;security&gt;
+      &lt;user-name&gt;root&lt;/user-name&gt;
+      &lt;password&gt;&lt;/password&gt;
+    &lt;/security&gt;
+  &lt;/datasource&gt;
+&lt;/datasources&gt;
+</code></pre>
+
+<p>and checkout its metrics at</p>
+
+<p><a href="http://PUBLIC_IP:8080/buffalo/rest/datasource/TestDS/mysql-ds.xml">http://PUBLIC_IP:8080/buffalo/rest/datasource/TestDS/mysql-ds.xml</a></p>
+
+<p>The application can be extended for example to aggregate multiple metrics, for example &ldquo;AvailableCount&rdquo;, from all
+deployed datasources and expose them at once.</p>
+
+<h2>Collecting, monitoring, charting, alerting</h2>
+
+<p>So far so good, but where is the awesomeness in all of this? It is in <a href="https://jbison.com/">JBison</a>! Login and create
+a JSON monitor:</p>
+
+<p><img class="center" src="/images/2013-02-01-collecting-monitoring-and-charting/new_monitor.png">
+<img class="center" src="/images/2013-02-01-collecting-monitoring-and-charting/json_monitor.png"></p>
+
+<p>Copy/paste any of the sample URLs:</p>
+
+<p><img class="center" src="/images/2013-02-01-collecting-monitoring-and-charting/monitor_settings.png"></p>
+
+<p>For each URL you will need a separate monitor. Each monitor is able to chart any metric you wish, or all of them via
+the &ldquo;*&rdquo; wildcard. For each metric you can define an alert that will be triggered if the condition is violated.
+Currently only email is available, but SMS notification is under development.</p>
+
+<p>In this example an alert will be sent via email, if any of the metrics is less than zero or AvailableCount is less
+than 15.</p>
+
+<p>A JSON monitor consists of a table showing its current state and a chart, which allows to show and hide particular
+metrics and also to display their values when pointing at a particular point in time:</p>
+
+<p><img class="center" src="/images/2013-02-01-collecting-monitoring-and-charting/monitor_summary.png"></p>
+
+<p>In case a metric is violated, that event is made visible in the UI:</p>
+
+<p><img class="center" src="/images/2013-02-01-collecting-monitoring-and-charting/chart.png"></p>
+
+<p>Besides this an email is sent:</p>
+
+<p><img class="center" src="/images/2013-02-01-collecting-monitoring-and-charting/email.png"></p>
+
+<p>Lekker!</p>
+]]></content>
+  </entry>
+  
+</feed>

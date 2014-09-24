@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mysql | Liquid Sky]]></title>
+  <link href="http://kijanowski.eu/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://kijanowski.eu/"/>
+  <updated>2014-09-24T21:37:00+02:00</updated>
+  <id>http://kijanowski.eu/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tuning Guvnor]]></title>
+    <link href="http://kijanowski.eu/blog/2008/08/18/tuning-guvnor/"/>
+    <updated>2008-08-18T10:33:00+02:00</updated>
+    <id>http://kijanowski.eu/blog/2008/08/18/tuning-guvnor</id>
+    <content type="html"><![CDATA[<p>Guvnor is the business rules management system in Drools 5. When you deploy it out of the box, you get an unsecured
+web application that stores data in Jackrabbit’s embedded Derby database.</p>
+
+<p>This article explains how to tune Guvnor deployed on JBoss Application Server 4.2.3. It&rsquo;s available in
+<a href="http://www.kijanowski.eu/index.php?site=articles&amp;article=tuning_guvnor&amp;lang=en">English</a> and
+<a href="http://www.kijanowski.eu/index.php?site=articles&amp;article=tuning_guvnor&amp;lang=de">German</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

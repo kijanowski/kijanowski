@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: beacon | Liquid Sky]]></title>
+  <link href="http://kijanowski.eu/blog/categories/beacon/atom.xml" rel="self"/>
+  <link href="http://kijanowski.eu/"/>
+  <updated>2014-09-24T21:37:00+02:00</updated>
+  <id>http://kijanowski.eu/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2]]></title>
+    <link href="http://kijanowski.eu/blog/2014/02/11/detecting-qualcomms-gimbal-beacons-in/"/>
+    <updated>2014-02-11T14:52:00+01:00</updated>
+    <id>http://kijanowski.eu/blog/2014/02/11/detecting-qualcomms-gimbal-beacons-in</id>
+    <content type="html"><![CDATA[<p>Recently I ordered the <a href="https://www.gimbal.com/">Gimbal proximity beacons</a> and before getting my hands dirty with the iOS and Android SDKs I wanted to smoke test these tiny sweeties.</p>
+
+<!--more-->
+
+
+<p><span class='caption-wrapper center'><img class='caption' src='/images/2014-02-11-detecting-qualcomms-gimbal-beacons-in/beacon.JPG' width='350' height='350' title='Case, Beacon, Bluetooth V4.0 Dongle'><span class='caption-text'>Case, Beacon, Bluetooth V4.0 Dongle</span></span></p>
+
+<p>How can you detect them and verify they send advertisement packets?</p>
+
+<h2>Mac OS X Mavericks</h2>
+
+<p>First you need a Bluettooth v4 device. I have a <a href="http://www.logilink.eu/showproduct/BT0015.htm">Bluetooth 4.0 Adapter from LogiLink</a>. On my Mac (OS X 10.9.1) in the System Report it shows up under the USB hardware as CSR8510 A10, Vendor Cambridge Silicon Radio Ltd.</p>
+
+<p>So far so good&hellip; Unfortunately under Bluetooth I still had the built-in 2.1 old-timer without LE support. The corresponding LMP version is &ldquo;4&rdquo;.</p>
+
+<p>So how do you get the external device working? Just change the switch behaviour of the bluetooth controller to switch to the internal device as soon as it’s plugged in:</p>
+
+<pre><code>sudo nvram bluetoothHostControllerSwitchBehavior="always"
+</code></pre>
+
+<p>Now plug in the dongle and refresh the System Report. The LMP version is now &ldquo;6&rdquo; which corresponds to Bluetooth 4.</p>
+
+<p>Last step to get the Gimbal beacons discovered is to install Bluetooth Explorer. Open Xcode and from the menu choose &ldquo;Open Developer Tool&rdquo; -&gt; &ldquo;More Developer Tools &hellip;&rdquo; which will navigate you to Apple’s download site for developers. Locate &ldquo;Hardware IO Tools for Xcode&rdquo; and install it.</p>
+
+<p><img class="center" src="/images/2014-02-11-detecting-qualcomms-gimbal-beacons-in/iotools.png"></p>
+
+<p>Open &ldquo;Bluetooth Explorer&rdquo; and from the menu choose &ldquo;Devices&rdquo; -&gt; &ldquo;Low Energy Devices&rdquo;. Start scanning and if your Gimbal beacons are working properly, you should see tons of advertising messages showing up.</p>
+
+<p><img class="center" src="/images/2014-02-11-detecting-qualcomms-gimbal-beacons-in/bluetoothexplorer.png"></p>
+
+<h2>Android</h2>
+
+<p>There’s a free app called <a href="https://play.google.com/store/apps/details?id=me.simplymobile.btsignal">Signal Sniffer</a> which nicely displays your beacon’s activity together with a signal strength.</p>
+
+<h2>Summary</h2>
+
+<p>Two beacons were just fine but the third one was not advertising at all. So I opened up that thing and it turned out that the piece connecting the battery with the circuit board had to be bent a little bit.</p>
+]]></content>
+  </entry>
+  
+</feed>
