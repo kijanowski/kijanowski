@@ -4,10 +4,10 @@
   <title><![CDATA[Category: beacon | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/beacon/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2]]></title>
-    <link href="http://kijanowski.eu/blog/2014/02/11/detecting-qualcomms-gimbal-beacons-in/"/>
+    <link href="http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html"/>
     <updated>2014-02-11T14:52:00+01:00</updated>
-    <id>http://kijanowski.eu/blog/2014/02/11/detecting-qualcomms-gimbal-beacons-in</id>
+    <id>http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in</id>
     <content type="html"><![CDATA[<p>Recently I ordered the <a href="https://www.gimbal.com/">Gimbal proximity beacons</a> and before getting my hands dirty with the iOS and Android SDKs I wanted to smoke test these tiny sweeties.</p>
 
 <!--more-->

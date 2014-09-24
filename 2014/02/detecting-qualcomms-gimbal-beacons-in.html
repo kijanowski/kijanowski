@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Categories - Liquid Sky</title>
+  <title>Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2 - Liquid Sky</title>
   <meta name="author" content="Jarosław Kijanowski">
 
   
-  <meta name="description" content="Categories Rules [ 1 ] Drools [ 3 ] Rule engine [ 1 ] Jboss rules [ 6 ] Hibernate [ 1 ] Mysql [ 1 ] Ssl [ 1 ] Ldap [ 1 ] Guvnor [ 3 ] Book review [ &hellip;">
+  <meta name="description" content="Recently I ordered the Gimbal proximity beacons and before getting my hands dirty with the iOS and Android SDKs I wanted to smoke test these tiny &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kijanowski.eu/blog/categories/index.html">
+  <link rel="canonical" href="http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,65 +62,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Categories</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-28T23:11:00+02:00" pubdate data-updated="true"></time></p>
-  </header>
-  
-  <ul>
-
-    <li><a href="/blog/categories/rules/">Rules</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/drools/">Drools</a> [ 3 ]</li>
-
-    <li><a href="/blog/categories/rule engine/">Rule engine</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/jboss rules/">Jboss rules</a> [ 6 ]</li>
-
-    <li><a href="/blog/categories/hibernate/">Hibernate</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/mysql/">Mysql</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/ssl/">Ssl</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/ldap/">Ldap</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/guvnor/">Guvnor</a> [ 3 ]</li>
-
-    <li><a href="/blog/categories/book review/">Book review</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/pipeline/">Pipeline</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/jboss/">Jboss</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/monitoring/">Monitoring</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/jbison/">Jbison</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/beacon/">Beacon</a> [ 1 ]</li>
-
-</ul>
-
-
-  
-    <footer>
+    
+      <h1 class="entry-title">Detecting Qualcomm’s Gimbal Beacons in Mac OS X Mavericks and on Android 4.2</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -132,12 +82,102 @@
   
 
 
-<time datetime="2013-07-28T23:11:00+02:00" pubdate data-updated="true"></time>
+<time datetime="2014-02-11T14:52:00+01:00" pubdate data-updated="true"></time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recently I ordered the <a href="https://www.gimbal.com/">Gimbal proximity beacons</a> and before getting my hands dirty with the iOS and Android SDKs I wanted to smoke test these tiny sweeties.</p>
+
+<!--more-->
+
+
+<p><span class='caption-wrapper center'><img class='caption' src='/images/2014-02-11-detecting-qualcomms-gimbal-beacons-in/beacon.JPG' width='350' height='350' title='Case, Beacon, Bluetooth V4.0 Dongle'><span class='caption-text'>Case, Beacon, Bluetooth V4.0 Dongle</span></span></p>
+
+<p>How can you detect them and verify they send advertisement packets?</p>
+
+<h2>Mac OS X Mavericks</h2>
+
+<p>First you need a Bluettooth v4 device. I have a <a href="http://www.logilink.eu/showproduct/BT0015.htm">Bluetooth 4.0 Adapter from LogiLink</a>. On my Mac (OS X 10.9.1) in the System Report it shows up under the USB hardware as CSR8510 A10, Vendor Cambridge Silicon Radio Ltd.</p>
+
+<p>So far so good&hellip; Unfortunately under Bluetooth I still had the built-in 2.1 old-timer without LE support. The corresponding LMP version is &ldquo;4&rdquo;.</p>
+
+<p>So how do you get the external device working? Just change the switch behaviour of the bluetooth controller to switch to the internal device as soon as it’s plugged in:</p>
+
+<pre><code>sudo nvram bluetoothHostControllerSwitchBehavior="always"
+</code></pre>
+
+<p>Now plug in the dongle and refresh the System Report. The LMP version is now &ldquo;6&rdquo; which corresponds to Bluetooth 4.</p>
+
+<p>Last step to get the Gimbal beacons discovered is to install Bluetooth Explorer. Open Xcode and from the menu choose &ldquo;Open Developer Tool&rdquo; -&gt; &ldquo;More Developer Tools &hellip;&rdquo; which will navigate you to Apple’s download site for developers. Locate &ldquo;Hardware IO Tools for Xcode&rdquo; and install it.</p>
+
+<p><img class="center" src="/images/2014-02-11-detecting-qualcomms-gimbal-beacons-in/iotools.png"></p>
+
+<p>Open &ldquo;Bluetooth Explorer&rdquo; and from the menu choose &ldquo;Devices&rdquo; -&gt; &ldquo;Low Energy Devices&rdquo;. Start scanning and if your Gimbal beacons are working properly, you should see tons of advertising messages showing up.</p>
+
+<p><img class="center" src="/images/2014-02-11-detecting-qualcomms-gimbal-beacons-in/bluetoothexplorer.png"></p>
+
+<h2>Android</h2>
+
+<p>There’s a free app called <a href="https://play.google.com/store/apps/details?id=me.simplymobile.btsignal">Signal Sniffer</a> which nicely displays your beacon’s activity together with a signal strength.</p>
+
+<h2>Summary</h2>
+
+<p>Two beacons were just fine but the third one was not advertising at all. So I opened up that thing and it turned out that the piece connecting the battery with the circuit board had to be bent a little bit.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-    </footer>
   
+
+<span class="byline author vcard">Posted by <span class="fn">Jarosław Kijanowski</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-11T14:52:00+01:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/beacon/'>beacon</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html" data-via="jkijanowski" data-counturl="http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html" title="Previous Post: JBoss AS 7 monitoring: JMS, JVM and Http Connectors">&laquo; JBoss AS 7 monitoring: JMS, JVM and Http Connectors</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
   <section>
@@ -229,8 +269,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://kijanowski.eu/blog/categories/index.html';
-        var disqus_url = 'http://kijanowski.eu/blog/categories/index.html';
+        var disqus_identifier = 'http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html';
+        var disqus_url = 'http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html';
         var disqus_script = 'embed.js';
       
     (function () {

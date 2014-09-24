@@ -4,10 +4,10 @@
   <title><![CDATA[Category: book review | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/book-review/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Drools JBoss Rules 5.0 Developer's Guide book review]]></title>
-    <link href="http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide/"/>
+    <link href="http://kijanowski.eu/2009/10/drools-jboss-rules-50-developers-guide.html"/>
     <updated>2009-10-02T17:34:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide</id>
+    <id>http://kijanowski.eu/2009/10/drools-jboss-rules-50-developers-guide</id>
     <content type="html"><![CDATA[<p><a href="http://www.packtpub.com/drools-jboss-rules-5-0-developers-guide/book">The Developer&rsquo;s Guide</a> is the second book about
 Drools available from <a href="http://www.packtpub.com">Packt</a>. It nicely extends the Drools documentation showing a new point
 of view at almost all features.</p>
@@ -48,9 +48,9 @@ integration points with other systems.</p>
   
   <entry>
     <title type="html"><![CDATA[JBoss Drools Business Rules book review]]></title>
-    <link href="http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review/"/>
+    <link href="http://kijanowski.eu/2009/06/jboss-drools-business-rules-book-review.html"/>
     <updated>2009-06-08T18:35:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review</id>
+    <id>http://kijanowski.eu/2009/06/jboss-drools-business-rules-book-review</id>
     <content type="html"><![CDATA[<p>It&rsquo;s quite difficult to get started with Drools, especially if you don&rsquo;t have experience in developing Java
 applications. You might imagine how steep the learning curve is for business analysts, who associates Java with an
 island or coffee. However <a href="http://www.packtpub.com/jboss-drools-business-rules/book">this book</a> is aimed at exactly

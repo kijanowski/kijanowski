@@ -4,10 +4,10 @@
   <title><![CDATA[Category: rules | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/rules/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Welcome to the world of rules]]></title>
-    <link href="http://kijanowski.eu/blog/2008/06/23/welcome-to-world-of-rules/"/>
+    <link href="http://kijanowski.eu/2008/06/welcome-to-world-of-rules.html"/>
     <updated>2008-06-23T12:03:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2008/06/23/welcome-to-world-of-rules</id>
+    <id>http://kijanowski.eu/2008/06/welcome-to-world-of-rules</id>
     <content type="html"><![CDATA[<p>Have you ever heard about rule engines and thought what it is good for? Have you ever been curious how you could benefit
 from using a rule engine in your Java applications? I&rsquo;ve written a short introduction into the world of rules and
 characterized a sample implementation called Drools. This article is available in

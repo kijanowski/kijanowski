@@ -4,10 +4,10 @@
   <title><![CDATA[Category: jboss rules | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/jboss-rules/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using rules to pick up rules - Selectors in Guvnor]]></title>
-    <link href="http://kijanowski.eu/blog/2009/07/24/using-rules-to-pick-up-rules-selectors/"/>
+    <link href="http://kijanowski.eu/2009/07/using-rules-to-pick-up-rules-selectors.html"/>
     <updated>2009-07-24T21:15:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/07/24/using-rules-to-pick-up-rules-selectors</id>
+    <id>http://kijanowski.eu/2009/07/using-rules-to-pick-up-rules-selectors</id>
     <content type="html"><![CDATA[<p>When you build a package, all its assets are used to compile it. However you might want only a subset of your rules to
 go into a package. Moreover you might want to create different snapshots that include different set of rules.
 This <a href="http://kijanowski.eu/index.php?site=articles&amp;article=guvnor_selectors&amp;lang=en">article</a> will show how to use the
@@ -27,9 +27,9 @@ Selector feature available in Guvnor to build packages containing only these rul
   
   <entry>
     <title type="html"><![CDATA[JMS – a new fact provider for Drools via Pipeline]]></title>
-    <link href="http://kijanowski.eu/blog/2009/07/08/jms-new-fact-provider-for-drools-via/"/>
+    <link href="http://kijanowski.eu/2009/07/jms-new-fact-provider-for-drools-via.html"/>
     <updated>2009-07-08T19:08:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/07/08/jms-new-fact-provider-for-drools-via</id>
+    <id>http://kijanowski.eu/2009/07/jms-new-fact-provider-for-drools-via</id>
     <content type="html"><![CDATA[<p>The Drools Pipeline is a great tool that allows to put facts into the rule engine from the outside world. Currently
 supported stores are JMS queues and topics and text files. The format of the payload is almost free to choose, since
 out of the box you can use JAXB, XStream and the powerful Smooks transformer to convert your data into facts,
@@ -42,9 +42,9 @@ Pipelines.</p>
   
   <entry>
     <title type="html"><![CDATA[JBoss Drools Business Rules book review]]></title>
-    <link href="http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review/"/>
+    <link href="http://kijanowski.eu/2009/06/jboss-drools-business-rules-book-review.html"/>
     <updated>2009-06-08T18:35:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review</id>
+    <id>http://kijanowski.eu/2009/06/jboss-drools-business-rules-book-review</id>
     <content type="html"><![CDATA[<p>It&rsquo;s quite difficult to get started with Drools, especially if you don&rsquo;t have experience in developing Java
 applications. You might imagine how steep the learning curve is for business analysts, who associates Java with an
 island or coffee. However <a href="http://www.packtpub.com/jboss-drools-business-rules/book">this book</a> is aimed at exactly
@@ -89,9 +89,9 @@ properly.</p>
   
   <entry>
     <title type="html"><![CDATA[Drools5 is out - there's also a book!]]></title>
-    <link href="http://kijanowski.eu/blog/2009/05/24/drools5-is-out-theres-also-book/"/>
+    <link href="http://kijanowski.eu/2009/05/drools5-is-out-theres-also-book.html"/>
     <updated>2009-05-24T11:54:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/05/24/drools5-is-out-theres-also-book</id>
+    <id>http://kijanowski.eu/2009/05/drools5-is-out-theres-also-book</id>
     <content type="html"><![CDATA[<p>Drools 5 is available for <a href="http://www.jboss.org/drools/downloads.html">download</a>. The corresponding svn tag is
 <a href="http://anonsvn.labs.jboss.com/labs/jbossrules/tags/5.0.1.26597.FINAL/.">http://anonsvn.labs.jboss.com/labs/jbossrules/tags/5.0.1.26597.FINAL/.</a> You can read the announcement on the
 <a href="http://blog.athico.com/2009/05/drools-5-released.html">Drools blog</a>.</p>
@@ -114,9 +114,9 @@ goes through building a business rule with the guided editor and ends with runni
   
   <entry>
     <title type="html"><![CDATA[Tuning Guvnor]]></title>
-    <link href="http://kijanowski.eu/blog/2008/08/18/tuning-guvnor/"/>
+    <link href="http://kijanowski.eu/2008/08/tuning-guvnor.html"/>
     <updated>2008-08-18T10:33:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2008/08/18/tuning-guvnor</id>
+    <id>http://kijanowski.eu/2008/08/tuning-guvnor</id>
     <content type="html"><![CDATA[<p>Guvnor is the business rules management system in Drools 5. When you deploy it out of the box, you get an unsecured
 web application that stores data in Jackrabbit’s embedded Derby database.</p>
 

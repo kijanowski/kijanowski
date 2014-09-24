@@ -4,10 +4,10 @@
   <title><![CDATA[Category: ldap | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/ldap/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tuning Guvnor]]></title>
-    <link href="http://kijanowski.eu/blog/2008/08/18/tuning-guvnor/"/>
+    <link href="http://kijanowski.eu/2008/08/tuning-guvnor.html"/>
     <updated>2008-08-18T10:33:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2008/08/18/tuning-guvnor</id>
+    <id>http://kijanowski.eu/2008/08/tuning-guvnor</id>
     <content type="html"><![CDATA[<p>Guvnor is the business rules management system in Drools 5. When you deploy it out of the box, you get an unsecured
 web application that stores data in Jackrabbit’s embedded Derby database.</p>
 

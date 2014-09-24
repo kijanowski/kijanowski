@@ -3,7 +3,7 @@
   
   
   <url>
-    <loc>http://kijanowski.eu/blog/2014/02/11/detecting-qualcomms-gimbal-beacons-in/</loc>
+    <loc>http://kijanowski.eu/2014/02/detecting-qualcomms-gimbal-beacons-in.html</loc>
     
     <lastmod>2014-02-11T14:52:00+01:00</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2013/05/26/jboss-as-7-monitoring-jms-jvm-and-http/</loc>
+    <loc>http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html</loc>
     
     <lastmod>2013-05-26T13:44:00+02:00</lastmod>
     
@@ -19,7 +19,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2013/02/01/collecting-monitoring-and-charting/</loc>
+    <loc>http://kijanowski.eu/2013/02/collecting-monitoring-and-charting.html</loc>
     
     <lastmod>2013-02-01T23:58:00+01:00</lastmod>
     
@@ -27,7 +27,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide/</loc>
+    <loc>http://kijanowski.eu/2009/10/drools-jboss-rules-50-developers-guide.html</loc>
     
     <lastmod>2009-10-02T17:34:00+02:00</lastmod>
     
@@ -35,7 +35,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2009/07/24/using-rules-to-pick-up-rules-selectors/</loc>
+    <loc>http://kijanowski.eu/2009/07/using-rules-to-pick-up-rules-selectors.html</loc>
     
     <lastmod>2009-07-24T21:15:00+02:00</lastmod>
     
@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2009/07/08/jms-new-fact-provider-for-drools-via/</loc>
+    <loc>http://kijanowski.eu/2009/07/jms-new-fact-provider-for-drools-via.html</loc>
     
     <lastmod>2009-07-08T19:08:00+02:00</lastmod>
     
@@ -51,7 +51,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2009/06/08/jboss-drools-business-rules-book-review/</loc>
+    <loc>http://kijanowski.eu/2009/06/jboss-drools-business-rules-book-review.html</loc>
     
     <lastmod>2009-06-08T18:35:00+02:00</lastmod>
     
@@ -59,7 +59,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2009/05/24/drools5-is-out-theres-also-book/</loc>
+    <loc>http://kijanowski.eu/2009/05/drools5-is-out-theres-also-book.html</loc>
     
     <lastmod>2009-05-24T11:54:00+02:00</lastmod>
     
@@ -67,7 +67,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2008/08/18/tuning-guvnor/</loc>
+    <loc>http://kijanowski.eu/2008/08/tuning-guvnor.html</loc>
     
     <lastmod>2008-08-18T10:33:00+02:00</lastmod>
     
@@ -75,7 +75,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2008/07/09/drools-meets-hibernate/</loc>
+    <loc>http://kijanowski.eu/2008/07/drools-meets-hibernate.html</loc>
     
     <lastmod>2008-07-09T19:51:00+02:00</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://kijanowski.eu/blog/2008/06/23/welcome-to-world-of-rules/</loc>
+    <loc>http://kijanowski.eu/2008/06/welcome-to-world-of-rules.html</loc>
     
     <lastmod>2008-06-23T12:03:00+02:00</lastmod>
     
@@ -93,42 +93,42 @@
   
   <url>
     <loc>http://kijanowski.eu/blog/</loc>
-    <lastmod>2014-09-24T21:40:25+02:00</lastmod>
+    <lastmod>2014-09-24T21:45:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://kijanowski.eu/blog/archives/</loc>
-    <lastmod>2014-09-24T21:40:25+02:00</lastmod>
+    <lastmod>2014-09-24T21:45:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://kijanowski.eu/</loc>
-    <lastmod>2014-09-24T21:40:25+02:00</lastmod>
+    <lastmod>2014-09-24T21:45:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://kijanowski.eu/archives/</loc>
-    <lastmod>2014-09-24T21:40:25+02:00</lastmod>
+    <lastmod>2014-09-24T21:45:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://kijanowski.eu/about/</loc>
-    <lastmod>2014-09-24T21:40:25+02:00</lastmod>
+    <lastmod>2014-09-24T21:45:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://kijanowski.eu/blog/categories/</loc>
-    <lastmod>2014-09-24T21:40:25+02:00</lastmod>
+    <lastmod>2014-09-24T21:45:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

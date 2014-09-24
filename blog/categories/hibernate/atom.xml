@@ -4,10 +4,10 @@
   <title><![CDATA[Category: hibernate | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/hibernate/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Drools meets Hibernate]]></title>
-    <link href="http://kijanowski.eu/blog/2008/07/09/drools-meets-hibernate/"/>
+    <link href="http://kijanowski.eu/2008/07/drools-meets-hibernate.html"/>
     <updated>2008-07-09T19:51:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2008/07/09/drools-meets-hibernate</id>
+    <id>http://kijanowski.eu/2008/07/drools-meets-hibernate</id>
     <content type="html"><![CDATA[<p>Drools evaluates facts which are present in the working memory. But it can also reason over data stored in a relational
 database. This can be achieved using for example a Hibernate Session to access a relational database and then creating
 a query. Objects in the resultset can be reasoned over the same way like facts in the working memory. An article, which

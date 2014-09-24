@@ -4,10 +4,10 @@
   <title><![CDATA[Category: drools | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/drools/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Drools JBoss Rules 5.0 Developer's Guide book review]]></title>
-    <link href="http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide/"/>
+    <link href="http://kijanowski.eu/2009/10/drools-jboss-rules-50-developers-guide.html"/>
     <updated>2009-10-02T17:34:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/10/02/drools-jboss-rules-50-developers-guide</id>
+    <id>http://kijanowski.eu/2009/10/drools-jboss-rules-50-developers-guide</id>
     <content type="html"><![CDATA[<p><a href="http://www.packtpub.com/drools-jboss-rules-5-0-developers-guide/book">The Developer&rsquo;s Guide</a> is the second book about
 Drools available from <a href="http://www.packtpub.com">Packt</a>. It nicely extends the Drools documentation showing a new point
 of view at almost all features.</p>
@@ -48,9 +48,9 @@ integration points with other systems.</p>
   
   <entry>
     <title type="html"><![CDATA[Drools meets Hibernate]]></title>
-    <link href="http://kijanowski.eu/blog/2008/07/09/drools-meets-hibernate/"/>
+    <link href="http://kijanowski.eu/2008/07/drools-meets-hibernate.html"/>
     <updated>2008-07-09T19:51:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2008/07/09/drools-meets-hibernate</id>
+    <id>http://kijanowski.eu/2008/07/drools-meets-hibernate</id>
     <content type="html"><![CDATA[<p>Drools evaluates facts which are present in the working memory. But it can also reason over data stored in a relational
 database. This can be achieved using for example a Hibernate Session to access a relational database and then creating
 a query. Objects in the resultset can be reasoned over the same way like facts in the working memory. An article, which
@@ -62,9 +62,9 @@ describes this is available in <a href="http://www.kijanowski.eu/index.php?site=
   
   <entry>
     <title type="html"><![CDATA[Welcome to the world of rules]]></title>
-    <link href="http://kijanowski.eu/blog/2008/06/23/welcome-to-world-of-rules/"/>
+    <link href="http://kijanowski.eu/2008/06/welcome-to-world-of-rules.html"/>
     <updated>2008-06-23T12:03:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2008/06/23/welcome-to-world-of-rules</id>
+    <id>http://kijanowski.eu/2008/06/welcome-to-world-of-rules</id>
     <content type="html"><![CDATA[<p>Have you ever heard about rule engines and thought what it is good for? Have you ever been curious how you could benefit
 from using a rule engine in your Java applications? I&rsquo;ve written a short introduction into the world of rules and
 characterized a sample implementation called Drools. This article is available in

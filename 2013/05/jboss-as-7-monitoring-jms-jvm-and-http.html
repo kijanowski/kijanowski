@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Categories - Liquid Sky</title>
+  <title>JBoss AS 7 monitoring: JMS, JVM and Http Connectors - Liquid Sky</title>
   <meta name="author" content="Jarosław Kijanowski">
 
   
-  <meta name="description" content="Categories Rules [ 1 ] Drools [ 3 ] Rule engine [ 1 ] Jboss rules [ 6 ] Hibernate [ 1 ] Mysql [ 1 ] Ssl [ 1 ] Ldap [ 1 ] Guvnor [ 3 ] Book review [ &hellip;">
+  <meta name="description" content="In the previous post I explained how to monitor JBoss AS 7
+resources with JBison. I extended the sample web application called
+buffalo, to collect &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kijanowski.eu/blog/categories/index.html">
+  <link rel="canonical" href="http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,65 +64,15 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Categories</h1>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-28T23:11:00+02:00" pubdate data-updated="true"></time></p>
-  </header>
-  
-  <ul>
-
-    <li><a href="/blog/categories/rules/">Rules</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/drools/">Drools</a> [ 3 ]</li>
-
-    <li><a href="/blog/categories/rule engine/">Rule engine</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/jboss rules/">Jboss rules</a> [ 6 ]</li>
-
-    <li><a href="/blog/categories/hibernate/">Hibernate</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/mysql/">Mysql</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/ssl/">Ssl</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/ldap/">Ldap</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/guvnor/">Guvnor</a> [ 3 ]</li>
-
-    <li><a href="/blog/categories/book review/">Book review</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/pipeline/">Pipeline</a> [ 1 ]</li>
-
-    <li><a href="/blog/categories/jboss/">Jboss</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/monitoring/">Monitoring</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/jbison/">Jbison</a> [ 2 ]</li>
-
-    <li><a href="/blog/categories/beacon/">Beacon</a> [ 1 ]</li>
-
-</ul>
-
-
-  
-    <footer>
+    
+      <h1 class="entry-title">JBoss as 7 Monitoring: JMS, JVM and Http Connectors</h1>
+    
+    
       <p class="meta">
         
-        
 
 
 
@@ -132,12 +84,102 @@
   
 
 
-<time datetime="2013-07-28T23:11:00+02:00" pubdate data-updated="true"></time>
+<time datetime="2013-05-26T13:44:00+02:00" pubdate data-updated="true"></time>
         
       </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>In the <a href="../../2013/02/collecting-monitoring-and-charting.html">previous post</a> I explained how to monitor JBoss AS 7
+resources with <a href="https://jbison.com">JBison</a>. I extended the sample web application called
+<a href="https://github.com/kijanowski/buffalo">buffalo</a>, to collect JMS, JVM and Http Connector metrics.</p>
+
+<!--more-->
+
+
+<p>Check out, compile and deploy buffalo in JBoss AS 7:</p>
+
+<pre><code>git clone git://github.com/kijanowski/buffalo.git
+mvn clean install
+cp target/buffalo.war $JBOSS_HOME/standalone/deployments/
+</code></pre>
+
+<p>Start JBoss with the <em>standalone-full</em> profile to have the hornetq messaging subsystem enabled.
+Pass <em>-c standalone-full.xml</em> to the <em>standalone.sh</em> or <em>standalone.bat</em> script.
+Access <a href="http://IP:port/buffalo/rest/messaging/default/queue/testQueue">http://IP:port/buffalo/rest/messaging/default/queue/testQueue</a> to collect metrics for the <em>testQueue</em>.</p>
+
+<p>Now it&rsquo;s time to add <a href="https://jbison.com">JBison</a> to the game. Let&rsquo;s create a JSON monitor, which will fire email
+notifications if the number of messages in a queue reaches 100:</p>
+
+<p><img class="center" src="/images/2013-05-26-jboss-as-7-monitoring-jms-jvm-and-http/monitor.png"></p>
+
+<p>I started adding messages into the queue without processing them:</p>
+
+<p><img class="center" src="/images/2013-05-26-jboss-as-7-monitoring-jms-jvm-and-http/chart.png"></p>
+
+<p>The queue filled up and I got an email notifying me, that one of the metrics got violated:</p>
+
+<p><img class="center" src="/images/2013-05-26-jboss-as-7-monitoring-jms-jvm-and-http/email.png"></p>
+
+<p>For further details on what resources and metrics are exposed by buffalo, take a look at
+<a href="https://github.com/kijanowski/buffalo/blob/master/README.md">buffalo&rsquo;s getting started guide</a>.</p>
+
+<p>Also <a href="https://jbison.com/home">sign up for a free JBison account</a> and start monitoring your JBoss resources.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
       
-    </footer>
   
+
+<span class="byline author vcard">Posted by <span class="fn">Jarosław Kijanowski</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-26T13:44:00+02:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jbison/'>jbison</a>, <a class='category' href='/blog/categories/jboss/'>jboss</a>, <a class='category' href='/blog/categories/monitoring/'>monitoring</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html" data-via="jkijanowski" data-counturl="http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/02/collecting-monitoring-and-charting.html" title="Previous Post: Collecting, Monitoring and Charting JBoss 7 metrics">&laquo; Collecting, Monitoring and Charting JBoss 7 metrics</a>
+      
+      
+        <a class="basic-alignment right" href="/2014/02/detecting-qualcomms-gimbal-beacons-in.html" title="Next Post: Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2">Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2 &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
   <section>
@@ -229,8 +271,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://kijanowski.eu/blog/categories/index.html';
-        var disqus_url = 'http://kijanowski.eu/blog/categories/index.html';
+        var disqus_identifier = 'http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html';
+        var disqus_url = 'http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html';
         var disqus_script = 'embed.js';
       
     (function () {

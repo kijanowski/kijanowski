@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Category: hibernate - Liquid Sky</title>
-  <meta name="author" content="Your Name">
+  <meta name="author" content="Jarosław Kijanowski">
 
   
   <meta name="description" content="Category: hibernate">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kijanowski.eu/blog/categories/hibernate/">
+  <link rel="canonical" href="http://kijanowski.eu/blog/categories/hibernate/index.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -52,10 +52,6 @@
             Liquid Sky
         </span>
        
-           <span class="blue_dark">
-             A blogging framework for hackers.
-           </span>
-       
     </a></li>
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
@@ -82,7 +78,7 @@
 
 <article>
   
-<h1><a href="/blog/2008/07/09/drools-meets-hibernate/">Drools meets Hibernate</a></h1>
+<h1><a href="/2008/07/drools-meets-hibernate.html">Drools meets Hibernate</a></h1>
 <time datetime="2008-07-09T19:51:00+02:00" pubdate><span class='month'>Jul</span> <span class='day'>09</span> <span class='year'>2008</span></time>
 
 <footer>
@@ -106,26 +102,55 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/02/11/detecting-qualcomms-gimbal-beacons-in/">Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2</a>
+        <a href="/2014/02/detecting-qualcomms-gimbal-beacons-in.html">Detecting Qualcomm’s Gimbal beacons in Mac OS X Mavericks and on Android 4.2</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/05/26/jboss-as-7-monitoring-jms-jvm-and-http/">JBoss AS 7 monitoring: JMS, JVM and Http Connectors</a>
+        <a href="/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html">JBoss AS 7 monitoring: JMS, JVM and Http Connectors</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/02/01/collecting-monitoring-and-charting/">Collecting, Monitoring and Charting JBoss 7 metrics</a>
+        <a href="/2013/02/collecting-monitoring-and-charting.html">Collecting, Monitoring and Charting JBoss 7 metrics</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2009/10/02/drools-jboss-rules-50-developers-guide/">Drools JBoss Rules 5.0 Developer&#8217;s Guide book review</a>
+        <a href="/2009/10/drools-jboss-rules-50-developers-guide.html">Drools JBoss Rules 5.0 Developer&#8217;s Guide book review</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2009/07/24/using-rules-to-pick-up-rules-selectors/">Using rules to pick up rules - Selectors in Guvnor</a>
+        <a href="/2009/07/using-rules-to-pick-up-rules-selectors.html">Using rules to pick up rules - Selectors in Guvnor</a>
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/kijanowski">@kijanowski</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'kijanowski',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
@@ -139,14 +164,36 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Your Name -
+  Copyright &copy; 2014 - Jarosław Kijanowski -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
 </footer>
   
 
+<script type="text/javascript">
+      var disqus_shortname = 'liquidsky';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 

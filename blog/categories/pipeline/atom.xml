@@ -4,10 +4,10 @@
   <title><![CDATA[Category: pipeline | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/pipeline/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JMS – a new fact provider for Drools via Pipeline]]></title>
-    <link href="http://kijanowski.eu/blog/2009/07/08/jms-new-fact-provider-for-drools-via/"/>
+    <link href="http://kijanowski.eu/2009/07/jms-new-fact-provider-for-drools-via.html"/>
     <updated>2009-07-08T19:08:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2009/07/08/jms-new-fact-provider-for-drools-via</id>
+    <id>http://kijanowski.eu/2009/07/jms-new-fact-provider-for-drools-via</id>
     <content type="html"><![CDATA[<p>The Drools Pipeline is a great tool that allows to put facts into the rule engine from the outside world. Currently
 supported stores are JMS queues and topics and text files. The format of the payload is almost free to choose, since
 out of the box you can use JAXB, XStream and the powerful Smooks transformer to convert your data into facts,

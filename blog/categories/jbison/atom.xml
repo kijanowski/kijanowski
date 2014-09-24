@@ -4,10 +4,10 @@
   <title><![CDATA[Category: jbison | Liquid Sky]]></title>
   <link href="http://kijanowski.eu/blog/categories/jbison/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T21:40:25+02:00</updated>
+  <updated>2014-09-24T21:45:34+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Jarosław Kijanowski]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[JBoss AS 7 monitoring: JMS, JVM and Http Connectors]]></title>
-    <link href="http://kijanowski.eu/blog/2013/05/26/jboss-as-7-monitoring-jms-jvm-and-http/"/>
+    <link href="http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http.html"/>
     <updated>2013-05-26T13:44:00+02:00</updated>
-    <id>http://kijanowski.eu/blog/2013/05/26/jboss-as-7-monitoring-jms-jvm-and-http</id>
+    <id>http://kijanowski.eu/2013/05/jboss-as-7-monitoring-jms-jvm-and-http</id>
     <content type="html"><![CDATA[<p>In the <a href="../../2013/02/collecting-monitoring-and-charting.html">previous post</a> I explained how to monitor JBoss AS 7
 resources with <a href="https://jbison.com">JBison</a>. I extended the sample web application called
 <a href="https://github.com/kijanowski/buffalo">buffalo</a>, to collect JMS, JVM and Http Connector metrics.</p>
@@ -58,9 +58,9 @@ notifications if the number of messages in a queue reaches 100:</p>
   
   <entry>
     <title type="html"><![CDATA[Collecting, Monitoring and Charting JBoss 7 metrics]]></title>
-    <link href="http://kijanowski.eu/blog/2013/02/01/collecting-monitoring-and-charting/"/>
+    <link href="http://kijanowski.eu/2013/02/collecting-monitoring-and-charting.html"/>
     <updated>2013-02-01T23:58:00+01:00</updated>
-    <id>http://kijanowski.eu/blog/2013/02/01/collecting-monitoring-and-charting</id>
+    <id>http://kijanowski.eu/2013/02/collecting-monitoring-and-charting</id>
     <content type="html"><![CDATA[<h2>JBoss AS 7 metrics</h2>
 
 <!--more-->
