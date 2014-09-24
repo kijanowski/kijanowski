@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://kijanowski.github.io/kijanowski/sitemap.xml 
+Sitemap: http://kijanowski.eu/sitemap.xml 
