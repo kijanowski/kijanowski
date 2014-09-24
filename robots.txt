@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://kijanowski.github.io/kijanowski/sitemap.xml 
