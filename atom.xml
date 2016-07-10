@@ -4,7 +4,7 @@
   <title><![CDATA[Liquid Sky]]></title>
   <link href="http://kijanowski.eu/atom.xml" rel="self"/>
   <link href="http://kijanowski.eu/"/>
-  <updated>2014-09-24T22:26:07+02:00</updated>
+  <updated>2016-07-10T22:03:50+02:00</updated>
   <id>http://kijanowski.eu/</id>
   <author>
     <name><![CDATA[Jarosław Kijanowski]]></name>
@@ -50,7 +50,7 @@
 
 <h2>Android</h2>
 
-<p>There’s a free app called <a href="https://play.google.com/store/apps/details?id=me.simplymobile.btsignal">Signal Sniffer</a> which nicely displays your beacon’s activity together with a signal strength.</p>
+<p>There’s a free app called <a href="https://play.google.com/store/apps/details?id=me.simplymobile.btsignal">Signal Sniffer</a> which nicely displays your beacon’s activity together with its signal strength.</p>
 
 <h2>Summary</h2>
 
